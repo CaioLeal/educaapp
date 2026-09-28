@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EducaApp - Aprendizado</title>
+    <!-- Importando os estilos -->
+    <link rel="stylesheet" href="src/css/style.css">
+    <link rel="stylesheet" href="src/css/navbar.css">
+</head>
+<body>
+    <!-- =========================================
+                    NAVBAR
+    ========================================= -->
+    <!-- A navbar será injetada aqui pelo JS -->
+    <header id="navbar-container"></header>
+
+    <main class="hero-section">
+        <div class="hero-image-container">
+            <!-- Espaço para a imagem/mascote do EducaApp -->
+            <div class="image-placeholder">
+                <img src="media/img/hero-image.png" alt="Personagens EducaApp" onerror="this.style.display='none'">
+            </div>
+        </div>
+        
+        <div class="hero-content">
+            <h1>Transforme seu tempo de tela em aprendizado</h1>
+            <div class="hero-buttons">
+                <button class="btn-primary">COMECE AGORA</button>
+                <button class="btn-secondary">JÁ TENHO UMA CONTA</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Carrossel de disciplinas (Inspirado no rodapé de idiomas) -->
+    <footer class="subjects-footer">
+        <ul class="subjects-list">
+            <li><span>📐</span> Matemática</li>
+            <li><span>📜</span> História</li>
+            <li><span>🇺🇸</span> Inglês</li>
+            <li><span>💻</span> Programação</li>
+            <li><span>📈</span> Finanças</li>
+            <li><span>🧪</span> Ciência</li>
+        </ul>
+    </footer>
+
+    <!-- =========================================
+                      FEATURES
+    ========================================= -->
+    <section class="features-container">
+        <!-- Seção 1: Texto na Esquerda, Imagem na Direita -->
+        <div class="feature-row">
+            <div class="feature-text">
+                <h2>aprender também é scroll.</h2>
+                <p>Substitua o tempo perdido em redes sociais por videoaulas curtas e objetivas. Deslize a tela e aprenda algo novo sobre matemática, história ou ciência todos os dias, sem complicação.</p>
+            </div>
+            <div class="feature-image">
+                <!-- O placeholder usa a cor lilás da sua paleta -->
+                <div class="image-placeholder feature-placeholder lilac-bg"></div>
+            </div>
+        </div>
+
+        <!-- Seção 2: Texto na Direita, Imagem na Esquerda (Invertido) -->
+        <div class="feature-row reverse">
+            <div class="feature-text">
+                <h2>gamificação e recompensas.</h2>
+                <p>Mantenha sua sequência diária com nosso sistema de "foguinho". Ganhe medalhas, suba de nível e revise conteúdos de forma super divertida através de flashcards e quizzes interativos.</p>
+            </div>
+            <div class="feature-image">
+                <!-- O placeholder usa a cor verde limão da sua paleta -->
+                <div class="image-placeholder feature-placeholder green-bg"></div>
+            </div>
+        </div>
+
+        <!-- Seção 3: Texto na Esquerda, Imagem na Direita -->
+        <div class="feature-row">
+            <div class="feature-text">
+                <h2>trilhas personalizadas.</h2>
+                <p>Estude no seu próprio ritmo. Siga seus professores favoritos, escolha os temas que mais gosta e crie playlists de estudo feitas sob medida para o seu desenvolvimento autodidata.</p>
+            </div>
+            <div class="feature-image">
+                <div class="image-placeholder feature-placeholder lilac-bg"></div>
+            </div>
+        </div>
+
+        <!-- Seção 4: Texto na Direita, Imagem na Esquerda (Invertido) -->
+        <div class="feature-row reverse">
+            <div class="feature-text">
+                <h2>gratuito e para todos.</h2>
+                <p>Uma plataforma acessível para jovens estudantes e curiosos. Aprenda com conteúdos completos gratuitamente ou apoie seus criadores de conteúdo favoritos através de doações.</p>
+            </div>
+            <div class="feature-image">
+                <div class="image-placeholder feature-placeholder green-bg"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================================
+                      DOWNLOAD
+    ========================================= -->
+    <section class="download-section">
+        <!-- Elementos flutuantes de fundo (SVGs animados) -->
+        <div class="floating-bg">
+            <svg class="float-item float-1" width="40" height="40" viewBox="0 0 24 24"><rect width="20" height="20" x="2" y="2" rx="5" fill="var(--accent-lilac)"/></svg>
+            <svg class="float-item float-2" width="50" height="50" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" fill="var(--accent-green)"/></svg>
+            <svg class="float-item float-3" width="30" height="30" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="var(--primary-color)" opacity="0.7"/></svg>
+            <svg class="float-item float-4" width="60" height="60" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="3" rx="4" fill="var(--text-dark)" opacity="0.8" transform="rotate(15 12 12)"/></svg>
+        </div>
+
+        <div class="download-content">
+            <h2>aprenda onde e<br>quando quiser</h2>
+            
+            <div class="store-buttons">
+                <button class="btn-store">
+                    <span class="store-icon">🍎</span>
+                    <div class="store-text">
+                        <small>Baixe na</small>
+                        <strong>App Store</strong>
+                    </div>
+                </button>
+                <button class="btn-store">
+                    <span class="store-icon">▶️</span>
+                    <div class="store-text">
+                        <small>DISPONÍVEL NO</small>
+                        <strong>Google Play</strong>
+                    </div>
+                </button>
+            </div>
+        </div>
+
+        <!-- Espaço para você inserir os mockups dos celulares no futuro -->
+        <div class="phones-container">
+            <div class="phone-mockup phone-left">
+                <!-- Coloque a tag <img> do celular da esquerda aqui -->
+                <div class="placeholder-phone">Mockup Celular</div>
+            </div>
+            <div class="phone-mockup phone-right">
+                 <!-- Coloque a tag <img> do celular da direita aqui -->
+                 <div class="placeholder-phone">Mockup Celular</div>
+            </div>
+            <div class="phone-mockup phone-center">
+                 <!-- Coloque a tag <img> do celular central aqui (opcional) -->
+                 <div class="placeholder-phone">Mockup Celular</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================================
+                      FORMULÁRIO
+    ========================================= -->
+    <section class="form-section">
+        <!-- SVGs Decorativos de Fundo -->
+        <div class="form-decorations">
+            <svg class="decor decor-1" width="70" height="70" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" fill="var(--accent-green)"/></svg>
+            <svg class="decor decor-2" width="90" height="90" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="var(--accent-lilac)" opacity="0.8"/></svg>
+            <svg class="decor decor-3" width="60" height="60" viewBox="0 0 24 24"><rect width="16" height="16" x="4" y="4" rx="4" fill="var(--primary-color)" opacity="0.3" transform="rotate(25 12 12)"/></svg>
+        </div>
+
+        <div class="form-container">
+            <div class="form-header">
+                <h2>junte-se à turma!</h2>
+                <p>Inscreva-se para receber acesso antecipado e novidades sobre o EducaApp.</p>
+            </div>
+            
+            <!-- Formulário -->
+            <form class="educa-form" action="#" method="POST">
+                <div class="input-group">
+                    <label for="nome">Nome completo</label>
+                    <input type="text" id="nome" name="nome" placeholder="Como devemos te chamar?" required>
+                </div>
+                
+                <div class="input-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" placeholder="seu@email.com.br" required>
+                </div>
+                
+                <button type="submit" class="btn-primary btn-submit">GARANTIR O MEU LUGAR!</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- =========================================
+                      FOOTER
+    ========================================= -->
+    <footer class="main-footer">
+        <!-- SVG Múltiplas Curvas "Líquidas" no Topo -->
+        <div class="footer-wave-container">
+            <svg id="footer-wave" viewBox="0 0 1200 200" preserveAspectRatio="none">
+                <!-- Camada de trás (mais clara) -->
+                <path class="wave-back" d="M0,150 C300,180 900,120 1200,150 L1200,200 L0,200 Z" fill="var(--primary-color)" opacity="0.4" />
+                <!-- Camada do meio -->
+                <path class="wave-mid" d="M0,160 C400,130 800,190 1200,160 L1200,200 L0,200 Z" fill="var(--primary-color)" opacity="0.7" />
+                <!-- Camada da frente (sólida) -->
+                <path class="wave-front" d="M0,170 C300,150 900,190 1200,170 L1200,200 L0,200 Z" fill="var(--primary-color)" />
+            </svg>
+            
+            <!-- SVGs flutuantes que reagem ao mouse -->
+            <div class="interactive-icons">
+                <svg class="mouse-react icon-1" width="45" height="45" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" fill="var(--accent-green)"/></svg>
+                <svg class="mouse-react icon-2" width="60" height="60" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="var(--accent-lilac)"/></svg>
+                <svg class="mouse-react icon-3" width="35" height="35" viewBox="0 0 24 24"><rect width="16" height="16" x="4" y="4" rx="4" fill="white" transform="rotate(15 12 12)"/></svg>
+            </div>
+        </div>
+
+        <div class="footer-content">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Projeto EducaApp</h3>
+                    <ul>
+                        <li>Componente: Projetos Empreendedores</li>
+                        <li>Universidade Presbiteriana Mackenzie</li>
+                        <li>Professora: Débora Richter Brolio</li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Desenvolvido por</h3>
+                    <ul>
+                        <li>Júlia Rodrigues Vieira (10775362)</li>
+                        <li>Bianca Santos de Souza (10764417)</li>
+                        <li>Julie Stefanie C. Ferreira (10780941)</li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Acesso Rápido</h3>
+                    <ul>
+                        <li><a href="#">Sobre o App</a></li>
+                        <li><a href="#">Metodologia</a></li>
+                        <li><a href="#">Gamificação</a></li>
+                        <li><a href="#">Baixar o Relatório</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>EducaApp - Transforme seu tempo de tela em aprendizado.</p>
+                <p>© 2026 - Trabalho acadêmico.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Importação do GSAP para animações interativas e complexas -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    
+    <!-- Importando o script principal como módulo -->
+    <script type="module" src="src/js/main.js"></script>
+</body>
+</html>

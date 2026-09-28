@@ -1,0 +1,215 @@
+@import url('./features.css');
+@import url('./download.css');
+@import url('./form.css');
+@import url('./footer.css');
+
+/* Variáveis de Cores e Fontes baseadas na apresentação do EducaApp */
+:root {
+    --primary-color: #2B45F6; /* Azul vibrante da palavra 'aprendizado' */
+    --primary-shadow: #192A9E; /* Sombra do azul */
+    --secondary-color: #111111; /* Preto forte do logo e títulos */
+    --accent-lilac: #A8A4F4; /* Lilás do painel 'COMO?' */
+    --accent-green: #D9F27E; /* Verde limão do painel 'QUANTO?' */
+    --text-dark: #111111;
+    --text-light: #555555;
+    --bg-color: #F4F4F2; /* Fundo off-white da imagem */
+    --border-color: #DCDCDA;
+    --font-main: 'Feather', sans-serif;
+    --font-fallback: 'Arial', sans-serif;
+}
+
+/* Importação da Fonte Local */
+@font-face {
+  font-family: 'Feather';
+  src: url('/media/fonts/Feather\ Bold.ttf') format('truetype');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-main), var(--font-fallback);
+    color: var(--text-dark);
+    background-color: var(--bg-color);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* =========================================
+                    HERO
+   ========================================= */
+.hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 6rem 2rem; /* Aumentado para dar mais respiro em cima e embaixo */
+    min-height: 85vh; /* Força a hero a ser alta e empurrar o resto para baixo */
+    gap: 4rem;
+}
+
+.hero-image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+/* Espaço da imagem com a cor lilás de fundo e borda preta */
+.image-placeholder {
+    width: 350px;
+    height: 350px;
+    background-color: var(--accent-lilac); 
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px dashed var(--secondary-color);
+}
+
+.hero-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 2.2rem;
+    margin-bottom: 2.5rem;
+    color: var(--text-dark);
+    line-height: 1.3;
+}
+
+/* Botões */
+.hero-buttons {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 320px;
+    gap: 1rem;
+}
+
+button {
+    font-family: var(--font-main);
+    font-size: 1rem;
+    padding: 1rem;
+    border-radius: 12px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.1s ease;
+}
+
+/* Botão principal em Azul Vibrante */
+.btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    box-shadow: 0 4px 0 var(--primary-shadow);
+}
+
+.btn-primary:active {
+    transform: translateY(4px);
+    box-shadow: 0 0 0 var(--primary-shadow);
+}
+
+/* Botão secundário em Verde Limão com contorno Escuro */
+.btn-secondary {
+    background-color: var(--accent-green);
+    color: var(--text-dark);
+    border: 2px solid var(--text-dark);
+    box-shadow: 0 4px 0 var(--text-dark);
+    font-weight: bold;
+}
+
+.btn-secondary:active {
+    transform: translateY(4px);
+    box-shadow: 0 0 0 var(--text-dark);
+}
+
+/* =========================================
+                  MATÉRIAS
+   ========================================= */
+.subjects-footer {
+    border-top: 2px solid var(--border-color);
+    padding: 1.5rem 0;
+    overflow-x: auto;
+}
+
+.subjects-list {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 2rem;
+    min-width: max-content;
+    padding: 0 2rem;
+}
+
+.subjects-list li {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* =========================================
+               RESPONSIVIDADE
+   ========================================= */
+@media screen and (max-width: 1024px) {
+    .hero-section {
+        gap: 2rem;
+        padding: 2rem 4rem;
+    }
+    .hero-content h1 {
+        font-size: 1.8rem;
+    }
+    .image-placeholder {
+        width: 300px;
+        height: 300px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .hero-section {
+        flex-direction: column;
+        text-align: center;
+        padding: 2rem;
+    }
+    .hero-content h1 {
+        font-size: 1.6rem;
+        margin-bottom: 1.5rem;
+    }
+    .image-placeholder {
+        width: 250px;
+        height: 250px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .hero-section {
+        padding: 1rem;
+    }
+    .hero-content h1 {
+        font-size: 1.4rem;
+    }
+    .hero-buttons {
+        max-width: 100%;
+    }
+    button {
+        padding: 0.8rem;
+        font-size: 0.9rem;
+    }
+    .subjects-list {
+        justify-content: flex-start;
+    }
+}

@@ -1,0 +1,122 @@
+/* =========================================
+                  FEATURES
+   ========================================= */
+.features-container {
+    max-width: 1000px;
+    margin: 6rem auto;
+    padding: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 8rem;
+}
+
+.feature-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4rem;
+}
+
+/* Inverte a ordem para a imagem ficar na esquerda */
+.feature-row.reverse {
+    flex-direction: row-reverse;
+}
+
+.feature-text {
+    flex: 1;
+}
+
+.feature-text h2 {
+    font-size: 2.8rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    line-height: 1.1;
+    letter-spacing: -1px;
+}
+
+.feature-text p {
+    font-size: 1.1rem;
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
+.feature-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.feature-placeholder {
+    width: 320px;
+    height: 320px;
+    border-radius: 32px;
+    border: 3px solid var(--secondary-color);
+}
+
+.lilac-bg {
+    background-color: var(--accent-lilac);
+}
+
+.green-bg {
+    background-color: var(--accent-green);
+}
+
+/* =========================================
+            RESPONSIVIDADE FEATURES
+   ========================================= */
+
+@media screen and (max-width: 1024px) {
+    .features-container {
+        gap: 6rem;
+    }
+    .feature-row {
+        gap: 2rem;
+    }
+    .feature-text h2 {
+        font-size: 2.2rem;
+    }
+    .feature-placeholder {
+        width: 280px;
+        height: 280px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .features-container {
+        margin: 4rem auto;
+        gap: 5rem;
+    }
+    
+    .feature-row, .feature-row.reverse {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .feature-image {
+        width: 100%;
+        order: -1;
+        margin-bottom: 2rem;
+    }
+
+    .feature-text h2 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .features-container {
+        padding: 0 1.5rem;
+        gap: 4rem;
+    }
+    .feature-text h2 {
+        font-size: 1.8rem;
+    }
+    .feature-text p {
+        font-size: 1rem;
+    }
+    .feature-placeholder {
+        width: 250px;
+        height: 250px;
+    }
+}
