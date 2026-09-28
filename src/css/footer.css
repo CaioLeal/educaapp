@@ -2,58 +2,15 @@
                    FOOTER
    ========================================= */
 .main-footer {
-    position: relative;
     width: 100%;
-    margin-top: 10rem;
+    margin-top: 8rem;
     background-color: var(--primary-color);
     color: white;
+    /* Bordas arredondadas apenas no topo */
+    border-top-left-radius: 48px;
+    border-top-right-radius: 48px;
+    padding-top: 5rem;
 }
-
-/* =========================================
-               ONDA LÍQUIDA
-   ========================================= */
-.footer-wave-container {
-    position: absolute;
-    top: -198px; /* Ajustado para a nova altura de 200px */
-    left: 0;
-    width: 100%;
-    height: 200px;
-    overflow: visible;
-    pointer-events: auto; /* IMPORTANTE: Agora permite que o mouse ative a água */
-    cursor: grab;
-}
-
-.footer-wave-container:active {
-    cursor: grabbing;
-}
-
-#footer-wave {
-    display: block;
-    width: 100%;
-    height: 100%;
-}
-
-.interactive-icons {
-    position: absolute;
-    top: -30px;
-    left: 0;
-    width: 100%;
-    height: 150px;
-    max-width: 1200px;
-    margin: 0 auto;
-    left: 50%;
-    transform: translateX(-50%);
-    pointer-events: none; /* Ícones não bloqueiam o mouse de tocar na água */
-}
-
-.mouse-react {
-    position: absolute;
-    z-index: 10;
-}
-
-.icon-1 { left: 20%; top: 20px; }
-.icon-2 { left: 50%; top: -30px; }
-.icon-3 { right: 25%; top: 40px; }
 
 /* =========================================
               CONTEÚDO DO FOOTER
@@ -122,13 +79,30 @@
 }
 
 @media screen and (max-width: 768px) {
-    .main-footer { margin-top: 6rem; }
-    .footer-grid { flex-direction: column; gap: 3rem; padding-bottom: 2rem; }
-    .footer-bottom { flex-direction: column; text-align: center; gap: 1rem; }
-    .interactive-icons { display: none; }
+    .main-footer { 
+        border-top-left-radius: 32px;
+        border-top-right-radius: 32px;
+        padding-top: 3rem;
+    }
+    
+    .footer-grid { 
+        flex-direction: column; 
+        gap: 3rem; 
+        padding-bottom: 2rem; 
+    }
+    
+    /* Centraliza tudo no mobile */
+    .footer-col {
+        text-align: center;
+    }
+    
+    .footer-bottom { 
+        flex-direction: column; 
+        text-align: center; 
+        gap: 1rem; 
+    }
 }
 
 @media screen and (max-width: 480px) {
-    .footer-wave-container { top: -98px; height: 100px; }
     .footer-content { padding: 0 1.5rem 3rem 1.5rem; }
 }

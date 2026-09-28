@@ -9,7 +9,7 @@ export function initNavbar() {
             <nav class="navbar">
                 <div class="logo">educaApp</div>
                 <div class="nav-options">
-                    <span>IDIOMA DO SITE: PORTUGUÊS 🡫</span>
+                    <!-- Conteúdo removido conforme solicitado -->
                 </div>
             </nav>
         `;

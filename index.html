@@ -4,28 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EducaApp - Aprendizado</title>
+    
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
     <!-- Importando os estilos -->
     <link rel="stylesheet" href="src/css/style.css">
     <link rel="stylesheet" href="src/css/navbar.css">
-
     <link rel="icon" href="/media/img/icon.png">
 </head>
 <body>
     <!-- =========================================
-                    NAVBAR
+                      NAVBAR
     ========================================= -->
-    <!-- A navbar será injetada aqui pelo JS -->
-    <header id="navbar-container"></header>
+    <header id="navbar-container" data-aos="fade-down"></header>
 
     <main class="hero-section">
-        <div class="hero-image-container">
-            <!-- Espaço para a imagem/mascote do EducaApp -->
+        <div class="hero-image-container" data-aos="zoom-in" data-aos-duration="1000">
             <div class="image-placeholder">
                 <img src="media/img/hero-image.png" alt="Personagens EducaApp" onerror="this.style.display='none'">
             </div>
         </div>
         
-        <div class="hero-content">
+        <div class="hero-content" data-aos="fade-up" data-aos-delay="300">
             <h1>Transforme seu tempo de tela em aprendizado</h1>
             <div class="hero-buttons">
                 <button class="btn-primary">COMECE AGORA</button>
@@ -34,7 +35,6 @@
         </div>
     </main>
 
-    <!-- Carrossel de disciplinas (Inspirado no rodapé de idiomas) -->
     <footer class="subjects-footer">
         <ul class="subjects-list">
             <li><span>📐</span> Matemática</li>
@@ -50,57 +50,49 @@
                       FEATURES
     ========================================= -->
     <section class="features-container">
-        <!-- Seção 1: Texto na Esquerda, Imagem na Direita -->
         <div class="feature-row">
-            <div class="feature-text">
+            <div class="feature-text" data-aos="fade-right">
                 <h2>aprender também é scroll.</h2>
                 <p>Substitua o tempo perdido em redes sociais por videoaulas curtas e objetivas. Deslize a tela e aprenda algo novo sobre matemática, história ou ciência todos os dias, sem complicação.</p>
             </div>
-            <div class="feature-image">
+            <div class="feature-image" data-aos="fade-left">
                 <div class="image-placeholder feature-placeholder lilac-bg">
-                    <!-- COLOQUE A IMAGEM AQUI -->
                     <img src="media/img/1.png" alt="Aprender com scroll" style="max-width: 100%; height: auto;">
                 </div>
             </div>
         </div>
 
-        <!-- Seção 2: Texto na Direita, Imagem na Esquerda (Invertido) -->
         <div class="feature-row reverse">
-            <div class="feature-text">
+            <div class="feature-text" data-aos="fade-left">
                 <h2>gamificação e recompensas.</h2>
                 <p>Mantenha sua sequência diária com nosso sistema de "foguinho". Ganhe medalhas, suba de nível e revise conteúdos de forma super divertida através de flashcards e quizzes interativos.</p>
             </div>
-            <div class="feature-image">
+            <div class="feature-image" data-aos="fade-right">
                 <div class="image-placeholder feature-placeholder green-bg">
-                    <!-- COLOQUE A IMAGEM AQUI -->
                     <img src="media/img/2.png" alt="Gamificação EducaApp" style="max-width: 100%; height: auto;">
                 </div>
             </div>
         </div>
 
-        <!-- Seção 3: Texto na Esquerda, Imagem na Direita -->
         <div class="feature-row">
-            <div class="feature-text">
+            <div class="feature-text" data-aos="fade-right">
                 <h2>trilhas personalizadas.</h2>
                 <p>Estude no seu próprio ritmo. Siga seus professores favoritos, escolha os temas que mais gosta e crie playlists de estudo feitas sob medida para o seu desenvolvimento autodidata.</p>
             </div>
-            <div class="feature-image">
+            <div class="feature-image" data-aos="fade-left">
                 <div class="image-placeholder feature-placeholder lilac-bg">
-                    <!-- COLOQUE A IMAGEM AQUI -->
                     <img src="media/img/3.png" alt="Trilhas Personalizadas" style="max-width: 100%; height: auto;">
                 </div>
             </div>
         </div>
 
-        <!-- Seção 4: Texto na Direita, Imagem na Esquerda (Invertido) -->
         <div class="feature-row reverse">
-            <div class="feature-text">
+            <div class="feature-text" data-aos="fade-left">
                 <h2>gratuito e para todos.</h2>
                 <p>Uma plataforma acessível para jovens estudantes e curiosos. Aprenda com conteúdos completos gratuitamente ou apoie seus criadores de conteúdo favoritos através de doações.</p>
             </div>
-            <div class="feature-image">
+            <div class="feature-image" data-aos="fade-right">
                 <div class="image-placeholder feature-placeholder green-bg">
-                    <!-- COLOQUE A IMAGEM AQUI -->
                     <img src="media/img/4.png" alt="Plataforma Gratuita" style="max-width: 100%; height: auto;">
                 </div>
             </div>
@@ -111,7 +103,6 @@
                       DOWNLOAD
     ========================================= -->
     <section class="download-section">
-        <!-- Elementos flutuantes de fundo (SVGs animados) -->
         <div class="floating-bg">
             <svg class="float-item float-1" width="40" height="40" viewBox="0 0 24 24"><rect width="20" height="20" x="2" y="2" rx="5" fill="var(--accent-lilac)"/></svg>
             <svg class="float-item float-2" width="50" height="50" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" fill="var(--accent-green)"/></svg>
@@ -119,7 +110,7 @@
             <svg class="float-item float-4" width="60" height="60" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="3" rx="4" fill="var(--text-dark)" opacity="0.8" transform="rotate(15 12 12)"/></svg>
         </div>
 
-        <div class="download-content">
+        <div class="download-content" data-aos="zoom-in">
             <h2>aprenda onde e<br>quando quiser</h2>
             
             <div class="store-buttons">
@@ -140,41 +131,35 @@
             </div>
         </div>
 
-        <!-- Espaço para você inserir os mockups dos celulares no futuro -->
-        <div class="phones-container">
+        <div class="phones-container" data-aos="fade-up" data-aos-duration="1200">
             <div class="phone-mockup phone-left">
-                <!-- Coloque a tag <img> do celular da esquerda aqui -->
                  <img src="media/img/cel1.png" alt="Aprender com scroll" style="max-width: 100%; height: auto;">
             </div>
             <div class="phone-mockup phone-right">
-                 <!-- Coloque a tag <img> do celular da direita aqui -->
                   <img src="media/img/cel2.png" alt="Aprender com scroll" style="max-width: 100%; height: auto;">
             </div>
             <div class="phone-mockup phone-center">
-                 <!-- Coloque a tag <img> do celular central aqui (opcional) -->
                   <img src="media/img/cel3.png" alt="Aprender com scroll" style="max-width: 100%; height: auto;">
             </div>
         </div>
     </section>
 
     <!-- =========================================
-                      FORMULÁRIO
+                      FORMULARIO
     ========================================= -->
     <section class="form-section">
-        <!-- SVGs Decorativos de Fundo -->
         <div class="form-decorations">
             <svg class="decor decor-1" width="70" height="70" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" fill="var(--accent-green)"/></svg>
             <svg class="decor decor-2" width="90" height="90" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="var(--accent-lilac)" opacity="0.8"/></svg>
             <svg class="decor decor-3" width="60" height="60" viewBox="0 0 24 24"><rect width="16" height="16" x="4" y="4" rx="4" fill="var(--primary-color)" opacity="0.3" transform="rotate(25 12 12)"/></svg>
         </div>
 
-        <div class="form-container">
+        <div class="form-container" data-aos="flip-up" data-aos-duration="1000">
             <div class="form-header">
                 <h2>junte-se à turma!</h2>
                 <p>Inscreva-se para receber acesso antecipado e novidades sobre o EducaApp.</p>
             </div>
             
-            <!-- Formulário -->
             <form class="educa-form" action="#" method="POST">
                 <div class="input-group">
                     <label for="nome">Nome completo</label>
@@ -195,28 +180,9 @@
                       FOOTER
     ========================================= -->
     <footer class="main-footer">
-        <!-- SVG Múltiplas Curvas "Líquidas" no Topo -->
-        <div class="footer-wave-container">
-            <svg id="footer-wave" viewBox="0 0 1200 200" preserveAspectRatio="none">
-                <!-- Camada de trás (mais clara) -->
-                <path class="wave-back" d="M0,150 C300,180 900,120 1200,150 L1200,200 L0,200 Z" fill="var(--primary-color)" opacity="0.4" />
-                <!-- Camada do meio -->
-                <path class="wave-mid" d="M0,160 C400,130 800,190 1200,160 L1200,200 L0,200 Z" fill="var(--primary-color)" opacity="0.7" />
-                <!-- Camada da frente (sólida) -->
-                <path class="wave-front" d="M0,170 C300,150 900,190 1200,170 L1200,200 L0,200 Z" fill="var(--primary-color)" />
-            </svg>
-            
-            <!-- SVGs flutuantes que reagem ao mouse -->
-            <div class="interactive-icons">
-                <svg class="mouse-react icon-1" width="45" height="45" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" fill="var(--accent-green)"/></svg>
-                <svg class="mouse-react icon-2" width="60" height="60" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="var(--accent-lilac)"/></svg>
-                <svg class="mouse-react icon-3" width="35" height="35" viewBox="0 0 24 24"><rect width="16" height="16" x="4" y="4" rx="4" fill="white" transform="rotate(15 12 12)"/></svg>
-            </div>
-        </div>
-
         <div class="footer-content">
             <div class="footer-grid">
-                <div class="footer-col">
+                <div class="footer-col" data-aos="fade-up" data-aos-delay="100">
                     <h3>Projeto EducaApp</h3>
                     <ul>
                         <li>Componente: Projetos Empreendedores</li>
@@ -225,7 +191,7 @@
                     </ul>
                 </div>
 
-                <div class="footer-col">
+                <div class="footer-col" data-aos="fade-up" data-aos-delay="200">
                     <h3>Desenvolvido por</h3>
                     <ul>
                         <li>Júlia Rodrigues Vieira (10775362)</li>
@@ -234,7 +200,7 @@
                     </ul>
                 </div>
 
-                <div class="footer-col">
+                <div class="footer-col" data-aos="fade-up" data-aos-delay="300">
                     <h3>Acesso Rápido</h3>
                     <ul>
                         <li><a href="#">Sobre o App</a></li>
@@ -252,8 +218,12 @@
         </div>
     </footer>
 
-    <!-- Importação do GSAP para animações interativas e complexas -->
+    <!-- Bibliotecas Externas (GSAP, AOS, Lenis) -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.34/dist/lenis.min.js"></script>
+
+    <script defer src="/_vercel/insights/script.js"></script>
     
     <!-- Importando o script principal como módulo -->
     <script type="module" src="src/js/main.js"></script>

@@ -1,19 +1,47 @@
 /* =========================================
                  MAIN APP
    ========================================= */
-// Importando os módulos
 import { initNavbar } from './navbar.js';
-import { initFooterAnimations } from './footer.js';
+import { initGlobalParallax } from './parallax.js'; // Importação atualizada
 
-// Inicializa os componentes quando o DOM estiver completamente carregado
 document.addEventListener('DOMContentLoaded', () => {
     initNavbar();
     
-    // Verifica se a biblioteca GSAP carregou no HTML antes de iniciar a animação
+    // 1. Inicializa o AOS (Animações de Scroll)
+    if (typeof AOS !== 'undefined') {
+        AOS.init({
+            once: true,
+            offset: 100,
+            duration: 800,
+        });
+    }
+
+    // 2. Inicializa o Lenis (Scroll Manteiga)
+    if (typeof Lenis !== 'undefined') {
+        const lenis = new Lenis({
+            duration: 1.2,
+            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+            direction: 'vertical',
+            gestureDirection: 'vertical',
+            smooth: true,
+            mouseMultiplier: 1,
+            smoothTouch: false,
+            touchMultiplier: 2,
+            infinite: false,
+        });
+
+        function raf(time) {
+            lenis.raf(time);
+            requestAnimationFrame(raf);
+        }
+        requestAnimationFrame(raf);
+    }
+
+    // 3. Inicializa o Parallax Global
     if (typeof gsap !== 'undefined') {
-        initFooterAnimations();
+        initGlobalParallax();
     } else {
-        console.warn('EducaApp: GSAP não carregado. Animações do footer desabilitadas.');
+        console.warn('EducaApp: GSAP não carregado. Efeito Parallax desabilitado.');
     }
     
     console.log('EducaApp: Interface carregada com sucesso!');

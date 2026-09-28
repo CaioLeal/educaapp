@@ -23,7 +23,7 @@ export function initFooterAnimations() {
         duration: 2,
         repeat: -1,
         yoyo: true,
-        stagger: 0.2,
+        stagger: .2,
         ease: "sine.inOut"
     });
 
@@ -37,18 +37,18 @@ export function initFooterAnimations() {
             iconFloat.pause();
 
             // A água sobe bruscamente e fica turbulenta (Altera o Y das curvas Bezier para subir)
-            gsap.to(waveBack, { attr: { d: "M0,60 C300,-10 900,110 1200,60 L1200,200 L0,200 Z" }, duration: 0.8, ease: "power2.out", overwrite: "auto" });
+            gsap.to(waveBack, { attr: { d: "M0,60 C300,-10 900,110 1200,60 L1200,200 L0,200 Z" }, duration: .8, ease: "power2.out", overwrite: "auto" });
             gsap.to(waveMid, { attr: { d: "M0,80 C400,130 800,20 1200,80 L1200,200 L0,200 Z" }, duration: 1, ease: "power2.out", overwrite: "auto" });
-            gsap.to(waveFront, { attr: { d: "M0,100 C300,30 900,150 1200,100 L1200,200 L0,200 Z" }, duration: 0.9, ease: "power2.out", overwrite: "auto" });
+            gsap.to(waveFront, { attr: { d: "M0,100 C300,30 900,150 1200,100 L1200,200 L0,200 Z" }, duration: .9, ease: "power2.out", overwrite: "auto" });
 
             // Os ícones afundam girando (Efeito afogamento)
             gsap.to(icons, {
                 y: 150, // Puxa para baixo da água
                 rotation: "+=180", // Gira rápido
-                scale: 0.3, // Diminui como se estivesse afundando
+                scale: .3, // Diminui como se estivesse afundando
                 opacity: 0,
                 duration: 1.2,
-                stagger: 0.1, // Um de cada vez
+                stagger: .1, // Um de cada vez
                 ease: "back.in(1.5)",
                 overwrite: "auto"
             });
@@ -61,7 +61,7 @@ export function initFooterAnimations() {
             
             gsap.to(waveFront, {
                 attr: { d: `M0,100 C${300 + agito},30 ${900 - agito},150 1200,100 L1200,200 L0,200 Z` },
-                duration: 0.5,
+                duration: .5,
                 ease: "power1.out",
                 overwrite: "auto"
             });
@@ -81,8 +81,8 @@ export function initFooterAnimations() {
                 scale: 1,
                 opacity: 1,
                 duration: 1.5,
-                stagger: 0.15,
-                ease: "elastic.out(1, 0.5)",
+                stagger: .15,
+                ease: "elastic.out(1, .5)",
                 onComplete: () => iconFloat.play()
             });
         });
