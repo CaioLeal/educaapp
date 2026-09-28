@@ -3,14 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>EducaApp - Aprendizado</title>
-    
-    <!-- AOS CSS -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    
-    <!-- Importando os estilos -->
+
+    <link
+        href="https://unpkg.com/aos@2.3.1/dist/aos.css"
+        rel="stylesheet"
+    >
+
     <link rel="stylesheet" href="src/css/style.css">
     <link rel="stylesheet" href="src/css/navbar.css">
+
     <link rel="icon" href="/media/img/icon.png">
 </head>
 <body>
@@ -218,14 +221,25 @@
         </div>
     </footer>
 
-    <!-- Bibliotecas Externas (GSAP, AOS, Lenis) -->
+    <!-- Bibliotecas -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
     <script src="https://unpkg.com/@studio-freight/lenis@1.0.34/dist/lenis.min.js"></script>
 
+
+    <!-- Vercel Analytics -->
+    <script>
+        window.va = window.va || function () {
+            (window.vaq = window.vaq || []).push(arguments);
+        };
+    </script>
+
     <script defer src="/_vercel/insights/script.js"></script>
-    
-    <!-- Importando o script principal como módulo -->
+
+
+    <!-- Seu código -->
     <script type="module" src="src/js/main.js"></script>
 </body>
 </html>
